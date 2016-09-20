@@ -4,7 +4,10 @@ class RockPaperScissors
   class NoSuchStrategyError < StandardError ; end
 
   def self.winner(player1, player2)
-    # YOUR CODE HERE
+    if player1[1] != /[RPS]/ or player2 != /[RPS]/
+      raise NoSuchStrategyError
+    end
+    
   end
 
   def self.tournament_winner(tournament)
